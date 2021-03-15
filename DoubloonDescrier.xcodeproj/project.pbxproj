@@ -11,10 +11,15 @@
 		31085821259257320096C33D /* DarkBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31085820259257320096C33D /* DarkBackground.swift */; };
 		31085824259258760096C33D /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31085823259258760096C33D /* TrackingView.swift */; };
 		3108582725925AC50096C33D /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108582625925AC50096C33D /* MoreView.swift */; };
+		3160867925F70F1D00670A87 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160867825F70F1D00670A87 /* BLEManager.swift */; };
+		3160867C25F710AA00670A87 /* BluetoothSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160867B25F710AA00670A87 /* BluetoothSettings.swift */; };
+		3195A72F25FC4E2D006D6274 /* HowTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3195A72E25FC4E2D006D6274 /* HowTo.swift */; };
+		3195A73225FC4E9F006D6274 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3195A73125FC4E9F006D6274 /* AboutUs.swift */; };
 		31A77C0F255A3F5C006A5252 /* DoubloonDescrierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A77C0E255A3F5C006A5252 /* DoubloonDescrierApp.swift */; };
 		31A77C11255A3F5C006A5252 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A77C10255A3F5C006A5252 /* ContentView.swift */; };
 		31A77C13255A3F5D006A5252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A77C12255A3F5D006A5252 /* Assets.xcassets */; };
 		31A77C16255A3F5D006A5252 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A77C15255A3F5D006A5252 /* Preview Assets.xcassets */; };
+		31A9750525FC74D6002A37A2 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A9750425FC74D6002A37A2 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +27,17 @@
 		31085820259257320096C33D /* DarkBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBackground.swift; sourceTree = "<group>"; };
 		31085823259258760096C33D /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		3108582625925AC50096C33D /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		3160867825F70F1D00670A87 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		3160867B25F710AA00670A87 /* BluetoothSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSettings.swift; sourceTree = "<group>"; };
+		3195A72E25FC4E2D006D6274 /* HowTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowTo.swift; sourceTree = "<group>"; };
+		3195A73125FC4E9F006D6274 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		31A77C0B255A3F5C006A5252 /* DoubloonDescrier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubloonDescrier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A77C0E255A3F5C006A5252 /* DoubloonDescrierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubloonDescrierApp.swift; sourceTree = "<group>"; };
 		31A77C10255A3F5C006A5252 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		31A77C12255A3F5D006A5252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31A77C15255A3F5D006A5252 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31A77C17255A3F5D006A5252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31A9750425FC74D6002A37A2 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3195A73425FC4EF2006D6274 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				3108582625925AC50096C33D /* MoreView.swift */,
+				3195A73125FC4E9F006D6274 /* AboutUs.swift */,
+				3195A72E25FC4E2D006D6274 /* HowTo.swift */,
+				3160867B25F710AA00670A87 /* BluetoothSettings.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		3195A73525FC4F09006D6274 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				31085820259257320096C33D /* DarkBackground.swift */,
+				3160867825F70F1D00670A87 /* BLEManager.swift */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		3195A73725FC4F1D006D6274 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				3108581D259254A80096C33D /* HomeView.swift */,
+				31085823259258760096C33D /* TrackingView.swift */,
+				3195A73425FC4EF2006D6274 /* More */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		31A77C02255A3F5C006A5252 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +102,9 @@
 			children = (
 				31A77C0E255A3F5C006A5252 /* DoubloonDescrierApp.swift */,
 				31A77C10255A3F5C006A5252 /* ContentView.swift */,
-				3108582625925AC50096C33D /* MoreView.swift */,
-				31085823259258760096C33D /* TrackingView.swift */,
-				3108581D259254A80096C33D /* HomeView.swift */,
-				31085820259257320096C33D /* DarkBackground.swift */,
+				31A9750425FC74D6002A37A2 /* SplashScreen.swift */,
+				3195A73725FC4F1D006D6274 /* Tabs */,
+				3195A73525FC4F09006D6274 /* Background */,
 				31A77C12255A3F5D006A5252 /* Assets.xcassets */,
 				31A77C17255A3F5D006A5252 /* Info.plist */,
 				31A77C14255A3F5D006A5252 /* Preview Content */,
@@ -151,9 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3108581E259254A80096C33D /* HomeView.swift in Sources */,
+				3160867C25F710AA00670A87 /* BluetoothSettings.swift in Sources */,
 				3108582725925AC50096C33D /* MoreView.swift in Sources */,
+				3160867925F70F1D00670A87 /* BLEManager.swift in Sources */,
 				31085821259257320096C33D /* DarkBackground.swift in Sources */,
 				31085824259258760096C33D /* TrackingView.swift in Sources */,
+				31A9750525FC74D6002A37A2 /* SplashScreen.swift in Sources */,
+				3195A72F25FC4E2D006D6274 /* HowTo.swift in Sources */,
+				3195A73225FC4E9F006D6274 /* AboutUs.swift in Sources */,
 				31A77C11255A3F5C006A5252 /* ContentView.swift in Sources */,
 				31A77C0F255A3F5C006A5252 /* DoubloonDescrierApp.swift in Sources */,
 			);

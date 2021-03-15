@@ -20,9 +20,9 @@ struct MoreView: View {
                 VStack(alignment:.leading) {
                     // BLUETOOTH SETTINGS
                     HStack{
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        NavigationLink(destination: BluetoothSettings()) {
                             Text("Bluetooth Settings")
-                        })
+                        }
                         Spacer()
                     }
                     .padding(.leading, 4)

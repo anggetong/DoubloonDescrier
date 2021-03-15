@@ -10,15 +10,18 @@ import SwiftUI      // allows us to use SwiftUI built-in components for our app
 // MAIN VIEW
 struct ContentView: View {
     var body: some View {
+        // TABS containing the different categories of the app
         TabView {
-            // HOME TAB
+            /* HOME TAB */
+            // includes the Welcome Screen for the app
             HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
             
-            // TRACKING TAB
+            /* TRACKING TAB */
+            // includes the map and tracker for the flags
             NavigationView{
                 TrackingView()
             }
@@ -27,7 +30,8 @@ struct ContentView: View {
                 Text("Tracking")
             }
             
-            // MORE TAB
+            /* MORE TAB */
+            // includes settings as well as other information
             MoreView()
             .tabItem {
                 Image(systemName: "ellipsis")
@@ -39,106 +43,6 @@ struct ContentView: View {
     }
 }
 
-
-
-
-
-
-
-/* HOW TO PAGE */
-struct HowTo: View {
-    var body: some View {
-        ZStack {
-            // BACKGROUND
-            LinearGradient(gradient: Gradient(colors: [Color(red: 0.2, green: 0.2, blue: 0.2), Color(red: 0.11, green: 0.11, blue: 0.11)]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-            
-            // CONTENTS
-            VStack (alignment: .leading, spacing: 10) {
-                Text("How to Use the App")
-                    .fontWeight(.bold)
-                Text("How to Use the Robot")
-                    .fontWeight(.bold)
-                Spacer()
-            }
-        }.navigationTitle("How To")
-    }
-}
-
-
-/* ABOUT US PAGE */
-struct AboutUs: View {
-    var body: some View {
-        ZStack {
-            // BACKGROUND
-            LinearGradient(gradient: Gradient(colors: [Color(red: 0.2, green: 0.2, blue: 0.2), Color(red: 0.11, green: 0.11, blue: 0.11)]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-            
-            // CONTENTS
-            VStack(alignment: .leading, spacing: 10) {
-                // ARIANNE
-                Group {
-                    // Title
-                    Text("Arianne Pablo")
-                        .fontWeight(.bold)
-                    HStack {
-                        // Image
-                        Image("AriannePablo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        // Description
-                        Text("Responsible for the Software Design and App Development")
-                    }
-                }
-                
-                // MIGUEL
-                Group {
-                    // Title
-                    Text("Miguel Avalos")
-                        .fontWeight(.bold)
-                    HStack {
-                        // Image
-                        Image("MiguelAvalos")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        // Description
-                        Text("Responsible for the design and implementation of the Electrical components")
-                    }
-                }
-                
-                // BRIAN
-                Group {
-                    // Title
-                    Text("Brian Stuck")
-                        .fontWeight(.bold)
-                    HStack {
-                        // Image
-                        Image("BrianStuck")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        // Description
-                        Text("Responsible for the design and implementation of the Mechanical components")
-                    }
-                }
-                
-                // AILEEN
-                Group {
-                    // Title
-                    Text("Aileen Rodriguez")
-                        .fontWeight(.bold)
-                    HStack {
-                        // Image
-                        Image("AileenRodriguez")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        // Description
-                        Text("Responsible for financial management, website development, communications, and provision of Hardware support")
-                    }
-                }
-            }.navigationTitle("About Us")
-        }
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
