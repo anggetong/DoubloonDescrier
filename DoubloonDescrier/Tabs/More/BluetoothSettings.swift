@@ -37,9 +37,8 @@ struct BluetoothSettings: View {
                 Text("Bluetooth is NOT switched on")
                     .foregroundColor(.red)
             }
- 
             Spacer()
- 
+ /*
             HStack {
                 VStack (spacing: 10) {
                     Button(action: {
@@ -56,7 +55,7 @@ struct BluetoothSettings: View {
  
                 Spacer()
  
-            }
+            }*/
             Spacer()
         }
     }

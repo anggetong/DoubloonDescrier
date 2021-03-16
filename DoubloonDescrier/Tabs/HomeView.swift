@@ -11,7 +11,7 @@ import SwiftUI
 // What the user sees when they open the app
 struct HomeView: View {
     @ObservedObject var bleStatus = BLEManager()
-    @State private var circleAnimate: CGFloat = 1
+    @State private var circleAnimate: CGFloat = 0.5
     
     var body: some View {
             ZStack {
@@ -20,24 +20,21 @@ struct HomeView: View {
                 SplashScreen()
                 VStack {
                     Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                        .frame(height: 550)
                     HStack {
                         Text("STATUS:")
-                        
-                        Text(bleStatus.isSwitchedOn ? "Connected": "Disconnected")
+                        Text(bleStatus.connected ? "    Connected ": "Disconnected")
                             .bold()
-                            .foregroundColor(bleStatus.isSwitchedOn ? .green: .red)
+                            .foregroundColor(bleStatus.connected ? .green: .red)
                         
                         Circle()
-                            .fill(bleStatus.isSwitchedOn ? Color.green: Color.red)
-                            .frame(width: 10, height: 10)
+                            .fill(bleStatus.connected ? Color.green: Color.red)
+                            .frame(width: 16, height: 10)
                             .overlay(
                                 Circle()
-                                    .stroke(bleStatus.isSwitchedOn ? Color.green: Color.red, lineWidth: 0.5)
+                                    .stroke(bleStatus.connected ? Color.green: Color.red, lineWidth: 0.5)
                                     .opacity(0.7)
+                                    .animation(nil)
                                     .scaleEffect(circleAnimate)
                                     .animation(
                                         Animation.easeOut(duration: 1)
@@ -47,7 +44,6 @@ struct HomeView: View {
                                 self.circleAnimate = 2
                             }
                     }
-                    Spacer()
                 }
             }
             
