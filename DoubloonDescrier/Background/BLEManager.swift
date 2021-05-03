@@ -19,8 +19,12 @@ struct Peripheral: Identifiable {
 class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var adafruitBLE: CBPeripheral!          // peripheral     (ie. Adafruit BLE)
     var centralDevice: CBCentralManager!    // central device (ie. iPhone)
+    var TxChar: CBCharacteristic!   // Transmitting Characteristic
+    var RxChar: CBCharacteristic!   // Receiver Characteristic
+    
     @Published var isSwitchedOn = false     // used to display central's BLE power state
     @Published var connected = false        // used to display if connected to peripheral
+    @Published var objectsFound = "0"
     
     //@Published var peripherals = [Peripheral]()     // arrays to store all the peripherals found
     
@@ -40,7 +44,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
             isSwitchedOn = true
             
             // start scanning for peripherals
-            central.scanForPeripherals(withServices: nil, options: nil)
+            central.scanForPeripherals(withServices: [CBUUIDs.BLEService_UUID])
             print("Scanning...")
          }
         // BT not powered on/something else wrong
@@ -48,7 +52,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
             isSwitchedOn = false
         }
     }
-
+    
     
     // scan resulted in discovering peripherals
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
@@ -94,7 +98,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
         print("Connected")
         
         // display info of services
-        peripheral.discoverServices(nil)
+        peripheral.discoverServices([CBUUIDs.BLEService_UUID])
         peripheral.delegate = self
     }
     
@@ -105,8 +109,13 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
         print("Disconnected")
         
         // scan for peripherals in attempts to reconnect
-        self.centralDevice?.scanForPeripherals(withServices: nil, options: nil)
+        self.centralDevice?.scanForPeripherals(withServices: [CBUUIDs.BLEService_UUID])
     }
+    
+    
+    
+    
+    
     
     /*
     func startScanning() {

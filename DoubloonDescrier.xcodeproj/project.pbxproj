@@ -13,6 +13,8 @@
 		3108582725925AC50096C33D /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108582625925AC50096C33D /* MoreView.swift */; };
 		3160867925F70F1D00670A87 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160867825F70F1D00670A87 /* BLEManager.swift */; };
 		3160867C25F710AA00670A87 /* BluetoothSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160867B25F710AA00670A87 /* BluetoothSettings.swift */; };
+		3165C91D263B31A2001C280B /* UUIDList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3165C91C263B31A2001C280B /* UUIDList.swift */; };
+		3165C921263BBA0F001C280B /* Peripheral_BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3165C920263BBA0F001C280B /* Peripheral_BLEManager.swift */; };
 		3195A72F25FC4E2D006D6274 /* HowTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3195A72E25FC4E2D006D6274 /* HowTo.swift */; };
 		3195A73225FC4E9F006D6274 /* AboutUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3195A73125FC4E9F006D6274 /* AboutUs.swift */; };
 		31A77C0F255A3F5C006A5252 /* DoubloonDescrierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A77C0E255A3F5C006A5252 /* DoubloonDescrierApp.swift */; };
@@ -29,6 +31,8 @@
 		3108582625925AC50096C33D /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		3160867825F70F1D00670A87 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		3160867B25F710AA00670A87 /* BluetoothSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSettings.swift; sourceTree = "<group>"; };
+		3165C91C263B31A2001C280B /* UUIDList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDList.swift; sourceTree = "<group>"; };
+		3165C920263BBA0F001C280B /* Peripheral_BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral_BLEManager.swift; sourceTree = "<group>"; };
 		3195A72E25FC4E2D006D6274 /* HowTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowTo.swift; sourceTree = "<group>"; };
 		3195A73125FC4E9F006D6274 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		31A77C0B255A3F5C006A5252 /* DoubloonDescrier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubloonDescrier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,8 @@
 			children = (
 				31085820259257320096C33D /* DarkBackground.swift */,
 				3160867825F70F1D00670A87 /* BLEManager.swift */,
+				3165C920263BBA0F001C280B /* Peripheral_BLEManager.swift */,
+				3165C91C263B31A2001C280B /* UUIDList.swift */,
 			);
 			path = Background;
 			sourceTree = "<group>";
@@ -193,10 +199,12 @@
 				3160867C25F710AA00670A87 /* BluetoothSettings.swift in Sources */,
 				3108582725925AC50096C33D /* MoreView.swift in Sources */,
 				3160867925F70F1D00670A87 /* BLEManager.swift in Sources */,
+				3165C91D263B31A2001C280B /* UUIDList.swift in Sources */,
 				31085821259257320096C33D /* DarkBackground.swift in Sources */,
 				31085824259258760096C33D /* TrackingView.swift in Sources */,
 				31A9750525FC74D6002A37A2 /* SplashScreen.swift in Sources */,
 				3195A72F25FC4E2D006D6274 /* HowTo.swift in Sources */,
+				3165C921263BBA0F001C280B /* Peripheral_BLEManager.swift in Sources */,
 				3195A73225FC4E9F006D6274 /* AboutUs.swift in Sources */,
 				31A77C11255A3F5C006A5252 /* ContentView.swift in Sources */,
 				31A77C0F255A3F5C006A5252 /* DoubloonDescrierApp.swift in Sources */,

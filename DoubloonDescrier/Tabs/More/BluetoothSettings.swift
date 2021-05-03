@@ -15,14 +15,14 @@ struct BluetoothSettings: View {
             Text("Bluetooth Devices")
                 .font(.largeTitle)
                 .frame(maxWidth: .infinity, alignment: .center)
-            List(bleManager.peripherals) { peripheral in
+            /*List(bleManager.peripherals) { peripheral in
                 HStack {
                     Text(peripheral.name)
                     Spacer()
                     Text(String(peripheral.rssi))
                 }
             }.frame(height: 300)
- 
+ */
             Spacer()
  
             Text("STATUS")
