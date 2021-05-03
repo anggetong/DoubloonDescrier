@@ -14,10 +14,13 @@ import SwiftUI
 // Tracks the robot's movements in a map
 struct TrackingView: View {
     // MAP VARIABLES
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.78322, longitude: -118.11065), span: MKCoordinateSpan(latitudeDelta: 0.0014, longitudeDelta: 0.0014))
+    @ObservedObject var bleManager: BLEManager
+    @State var pins: [Pin] = [
+        Pin(title: "CSULB", coordinate: .init(latitude: 33.78322, longitude: -118.11065))]
+    //let locationFetcher = LocationFetcher()
     
-    @ObservedObject var flagsBLE = BLEManager()
-    @State private var droppersLeft = 30
+    /*@State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.78322, longitude: -118.11065), span: MKCoordinateSpan(latitudeDelta: 0.0014, longitudeDelta: 0.0014))
+    */
     
     var body: some View {
             ZStack {
@@ -26,10 +29,8 @@ struct TrackingView: View {
                 
                 // OBJECT COUNTER DISPLAY
                 VStack(alignment: .center, spacing: 10) {
-                    Map(coordinateRegion: $region)
-                    Text("Objects Found: \(flagsBLE.objectsFound)")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    Text("Flags Left: \(droppersLeft)")
+                    MapView(bleManager: bleManager, pins: $pins)
+                    Text("Objects Found: \(bleManager.objectsFound)")
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     Spacer()
                 }
@@ -39,10 +40,10 @@ struct TrackingView: View {
     }
 }
 
-struct TrackingView_Previews: PreviewProvider {
+/*struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
         TrackingView()
         }
     }
-}
+}*/

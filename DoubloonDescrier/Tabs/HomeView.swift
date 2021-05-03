@@ -10,7 +10,7 @@ import SwiftUI
 /* HOME VIEW */
 // What the user sees when they open the app
 struct HomeView: View {
-    @ObservedObject var bleStatus = BLEManager()
+    @ObservedObject var bleManager: BLEManager
     @State private var circleAnimate: CGFloat = 0.5
     
     var body: some View {
@@ -23,16 +23,16 @@ struct HomeView: View {
                         .frame(height: 550)
                     HStack {
                         Text("STATUS:")
-                        Text(bleStatus.connected ? "    Connected ": "Disconnected")
+                        Text(bleManager.connected ? "    Connected ": "Disconnected")
                             .bold()
-                            .foregroundColor(bleStatus.connected ? .green: .red)
+                            .foregroundColor(bleManager.connected ? .green: .red)
                         
                         Circle()
-                            .fill(bleStatus.connected ? Color.green: Color.red)
+                            .fill(bleManager.connected ? Color.green: Color.red)
                             .frame(width: 16, height: 10)
                             .overlay(
                                 Circle()
-                                    .stroke(bleStatus.connected ? Color.green: Color.red, lineWidth: 0.5)
+                                    .stroke(bleManager.connected ? Color.green: Color.red, lineWidth: 0.5)
                                     .opacity(0.7)
                                     .animation(nil)
                                     .scaleEffect(circleAnimate)
@@ -52,8 +52,8 @@ struct HomeView: View {
     
 }
 
-struct HomeView_Previews: PreviewProvider {
+/*struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(bleManager: bleManager)
     }
-}
+}*/

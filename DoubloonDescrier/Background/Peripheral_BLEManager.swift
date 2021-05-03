@@ -81,17 +81,28 @@ extension BLEManager: CBPeripheralManagerDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
-        var charIntVal = NSString()
+        var dataRecvd = NSString()
+        var stringData = ""
         
         guard characteristic == RxChar,
               let charVal = characteristic.value,
-              let intVal = NSString(data: charVal, encoding: String.Encoding.utf8.rawValue)
+              let dataVal = NSString(data: charVal, encoding: String.Encoding.utf8.rawValue)
               else { return }
         
-        charIntVal = intVal
-        print("Value Recieved: \((charIntVal as String))")
+        dataRecvd = dataVal
+        print("Data Recieved: \((dataRecvd as String))")
         
-        self.objectsFound = charIntVal as String
+        //self.objectsFound = dataRecvd as String
+        stringData = dataRecvd as String
+        
+        let stringArray = stringData.components(separatedBy: ",")
+        
+        self.found = true
+        self.objectsFound = stringArray[0]
+        self.latitude = Double(stringArray[1]) ?? 0.000000
+        self.longitude = Double(stringArray[2]) ?? 0.000000
+        
+        print("Objects Found: \(objectsFound), Latitude: \(latitude), Longitude: \(longitude)")
     }
     
 }

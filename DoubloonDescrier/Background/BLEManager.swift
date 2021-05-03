@@ -22,9 +22,12 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     var TxChar: CBCharacteristic!   // Transmitting Characteristic
     var RxChar: CBCharacteristic!   // Receiver Characteristic
     
+    @Published var found = false
     @Published var isSwitchedOn = false     // used to display central's BLE power state
     @Published var connected = false        // used to display if connected to peripheral
     @Published var objectsFound = "0"
+    @Published var latitude: Double = 0.000000
+    @Published var longitude: Double = 0.000000
     
     //@Published var peripherals = [Peripheral]()     // arrays to store all the peripherals found
     

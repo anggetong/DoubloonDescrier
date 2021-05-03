@@ -9,12 +9,15 @@ import SwiftUI      // allows us to use SwiftUI built-in components for our app
 
 // MAIN VIEW
 struct ContentView: View {
+    @StateObject var bleManager = BLEManager()
+    
     var body: some View {
+        
         // TABS containing the different categories of the app
         TabView {
             /* HOME TAB */
             // includes the Welcome Screen for the app
-            HomeView()
+            HomeView(bleManager: bleManager)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
@@ -23,7 +26,7 @@ struct ContentView: View {
             /* TRACKING TAB */
             // includes the map and tracker for the flags
             NavigationView{
-                TrackingView()
+                TrackingView(bleManager: bleManager)
             }
             .tabItem {
                 Image(systemName: "location.fill")

@@ -11,6 +11,7 @@
 		31085821259257320096C33D /* DarkBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31085820259257320096C33D /* DarkBackground.swift */; };
 		31085824259258760096C33D /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31085823259258760096C33D /* TrackingView.swift */; };
 		3108582725925AC50096C33D /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108582625925AC50096C33D /* MoreView.swift */; };
+		313218B82640930700572366 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313218B72640930700572366 /* MapManager.swift */; };
 		3160867925F70F1D00670A87 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160867825F70F1D00670A87 /* BLEManager.swift */; };
 		3160867C25F710AA00670A87 /* BluetoothSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3160867B25F710AA00670A87 /* BluetoothSettings.swift */; };
 		3165C91D263B31A2001C280B /* UUIDList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3165C91C263B31A2001C280B /* UUIDList.swift */; };
@@ -29,6 +30,7 @@
 		31085820259257320096C33D /* DarkBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBackground.swift; sourceTree = "<group>"; };
 		31085823259258760096C33D /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		3108582625925AC50096C33D /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		313218B72640930700572366 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		3160867825F70F1D00670A87 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		3160867B25F710AA00670A87 /* BluetoothSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSettings.swift; sourceTree = "<group>"; };
 		3165C91C263B31A2001C280B /* UUIDList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDList.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				31085820259257320096C33D /* DarkBackground.swift */,
+				313218B72640930700572366 /* MapManager.swift */,
 				3160867825F70F1D00670A87 /* BLEManager.swift */,
 				3165C920263BBA0F001C280B /* Peripheral_BLEManager.swift */,
 				3165C91C263B31A2001C280B /* UUIDList.swift */,
@@ -199,6 +202,7 @@
 				3160867C25F710AA00670A87 /* BluetoothSettings.swift in Sources */,
 				3108582725925AC50096C33D /* MoreView.swift in Sources */,
 				3160867925F70F1D00670A87 /* BLEManager.swift in Sources */,
+				313218B82640930700572366 /* MapManager.swift in Sources */,
 				3165C91D263B31A2001C280B /* UUIDList.swift in Sources */,
 				31085821259257320096C33D /* DarkBackground.swift in Sources */,
 				31085824259258760096C33D /* TrackingView.swift in Sources */,
